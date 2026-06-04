@@ -10,3 +10,4 @@ layout: default
 {% assign page_name = page.path | split: "/" | last | split: "." | first %}
 {% assign gallery_folder = "/assets/images/" | append: page_name | append: "/" %}
 {% include image-gallery.html folder=gallery_folder %}
+
