@@ -1,0 +1,5 @@
+<nav>
+  {% for item in site.data.navigation %}
+    <button class="button" role="button"><a href="{{ item.link }}"><span id="spantest">{{ item.name }}</span></a></button>
+  {% endfor %}
+</nav>
