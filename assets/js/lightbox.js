@@ -42,8 +42,8 @@ function setGallery(el) {
     elements.forEach(element => {
         element.classList.remove('gallery');
 	});
-	if(el.closest('ul, p')) {
-		var link_elements = el.closest('ul, p').querySelectorAll("a[class*='lightbox-']");
+    if(el.closest('ul, p, .image-gallery')) {
+        var link_elements = el.closest('ul, p, .image-gallery').querySelectorAll("a[class*='lightbox-']");
 		link_elements.forEach(link_element => {
 			link_element.classList.remove('current');
 		});
@@ -137,6 +137,59 @@ document.addEventListener("DOMContentLoaded", function() {
             setGallery(this);
         });
     });
+    // Arrow key navigation
+    document.addEventListener("keydown", function(event) {
+        if(document.getElementById('lightbox').style.display == 'block') {
+            if(event.key === 'ArrowRight') {
+                document.getElementById('next').click();
+            }
+            if(event.key === 'ArrowLeft') {
+                document.getElementById('prev').click();
+            }
+            if(event.key === 'Escape') {
+                document.getElementById('lightbox').innerHTML = '';
+                document.getElementById('lightbox').style.display = 'none';
+            }
+        }
+    });
 
+    // Swipe / mouse drag navigation
+    var swipeStartX = 0;
+    var swipeThreshold = 50; // minimum px distance to trigger swipe
+
+    function handleSwipeStart(x) {
+        swipeStartX = x;
+    }
+
+    function handleSwipeEnd(x) {
+        if(document.getElementById('lightbox').style.display == 'block') {
+            var diff = swipeStartX - x;
+            if(Math.abs(diff) >= swipeThreshold) {
+                if(diff > 0) {
+                    document.getElementById('next').click(); // swiped left = next
+                } else {
+                    document.getElementById('prev').click(); // swiped right = prev
+                }
+            }
+        }
+    }
+
+    // Touch events (mobile)
+    document.getElementById('lightbox').addEventListener('touchstart', function(e) {
+        handleSwipeStart(e.touches[0].clientX);
+    }, { passive: true });
+
+    document.getElementById('lightbox').addEventListener('touchend', function(e) {
+        handleSwipeEnd(e.changedTouches[0].clientX);
+    });
+
+    // Mouse events (desktop drag)
+    document.getElementById('lightbox').addEventListener('mousedown', function(e) {
+        handleSwipeStart(e.clientX);
+    });
+
+    document.getElementById('lightbox').addEventListener('mouseup', function(e) {
+        handleSwipeEnd(e.clientX);
+    });
 });
 

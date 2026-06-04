@@ -16,7 +16,9 @@
       {% assign filenameparts = file.path | split: "/" %}
       {% assign filename = filenameparts | last | replace: file.extname,"" %}
 
-      <a href="{{ file.path }}" title="{{ filename }}">
+        
+        {% assign encodedfile = file.name | url_encode | replace: '+', '%20' %}
+        <a href="{{ include.folder }}/{{ encodedfile }}" title="{{ filename }}" data-lightbox="gallery" data-title="{{ filename }}" class="lightbox-image">
         <img src="//wsrv.nl/?url=whyttin.github.io/{{ file.path }}&w=300&h=300&output=jpg&q=50&t=square" alt="{{ filename }}" />
         <span>{{ filename }}</span>
       </a>
