@@ -24,6 +24,8 @@ Body - White #F9EEE5
     overflow:auto;
     text-align:center;
     box-shadow: 0 0 10px #582A29;
+    height: 100%;
+    overflow-y: auto;
 }
 .button {
     margin-top: 10px;
@@ -41,6 +43,7 @@ Body - White #F9EEE5
     touch-action: manipulation;
     white-space: nowrap;
     will-change: box-shadow,transform;
+    
 }
 .button a{
     display: block;
@@ -65,6 +68,7 @@ body {
     background: #EFDBC0;
     margin: 0px;
     word-wrap: break-word;
+
 }
 	
 
@@ -148,10 +152,12 @@ footer {
     color: #F9EEE5;
     text-shadow: 1px 1px 2px #3B3B3B;
     font-family: "Garamond", serif;
+
 }
 
 ul{
   margin: 0;
   padding: 0;
   list-style-type: none;
+  
 }
