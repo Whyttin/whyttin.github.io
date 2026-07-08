@@ -2,13 +2,13 @@
   link: /
 - name: Blog
   link: /blog.html
-- name: ⮺ Telegram
+- name: <img src="./assets/svg/icons8-external-link.svg">  Telegram
   link: https://t.me/WhyttinFo
-- name: ⮺ Furtrack
+- name: <img src="./assets/svg/icons8-external-link.svg"> Furtrack
   link: https://www.furtrack.com/user/Whyttin/photography
-- name: ⮺ Bluesky
+- name: <img src="./assets/svg/icons8-external-link.svg">  Bluesky
   link: https://bsky.app/profile/whyttin.bsky.social
-- name: ⮺ Instagram
+- name: <img src="./assets/svg/icons8-external-link.svg">  Instagram
   link: https://www.instagram.com/itswhyt
-- name: ⮺ Reddit
+- name: <img src="./assets/svg/icons8-external-link.svg">  Reddit
   link: https://www.reddit.com/u/Whyttin

@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
-
+        <script type="text/javascript" src="/assets/js/script.js" defer></script>
   </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <div class="sidenav">
         <!--Above the Navigation Information-->
         <img id="logo" src="/assets/images/WhyttinLogo-Tongue.png" width="250" height="255" alt="my silly little logo, which is just a commission!"><br>
@@ -16,15 +18,15 @@
         {% include navigation.html %}
         <!--Navigation Footer-->
         <footer>
-        <p>Made with Jekyll, HTML and CSS!<br> 
-            <abbr title="Project Started Date">PS</abbr>: 2026.05.17 
-            <abbr title="Last Updated Date">LU</abbr>: 2026.06.04
-        </p>
+            <p>Made with Jekyll, HTML and CSS!<br> 
+                <abbr title="Project Started Date">PS</abbr>: 2026.05.17 
+                <abbr title="Last Updated Date">LU</abbr>: 2026.07.08
+            </p>
         </footer>
     </div>
     <div class="main">
         {{ content }}
-    <link rel="stylesheet" href="/assets/css/lightbox.css">
-    <script type="text/javascript" src="/assets/js/lightbox.js" defer></script>
+        <link rel="stylesheet" href="/assets/css/lightbox.css">
+        <script type="text/javascript" src="/assets/js/lightbox.js" defer></script>
     </div>
 </html>

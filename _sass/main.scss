@@ -15,7 +15,7 @@ Body - White #F9EEE5
 .sidenav {
     background: #582A29;
     border: 1px solid #322E2D;
-    width: 250px;
+   width: 250px;
     margin-left: 50px;
     padding:15px;
     margin-top:-25px;
@@ -26,6 +26,7 @@ Body - White #F9EEE5
     box-shadow: 0 0 10px #582A29;
     height: 100%;
     overflow-y: auto;
+    float: left;
 }
 .button {
     margin-top: 10px;
@@ -43,12 +44,12 @@ Body - White #F9EEE5
     touch-action: manipulation;
     white-space: nowrap;
     will-change: box-shadow,transform;
-    
 }
 .button a{
     display: block;
     color: #582A29;
     z-index: 1;
+    text-decoration: none;
 }
 .button:focus {
   box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
@@ -82,6 +83,7 @@ body {
     padding: 15px;
     margin: 20px 25px 25px 360px;
     box-shadow: 0 0 10px #F9EEE5;
+    float: left;
 }
 
 h1{
@@ -146,13 +148,12 @@ h5{
   }
 
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 250px;
     color: #F9EEE5;
     text-shadow: 1px 1px 2px #3B3B3B;
     font-family: "Garamond", serif;
-
 }
 
 ul{
@@ -160,4 +161,52 @@ ul{
   padding: 0;
   list-style-type: none;
   
+}
+.hidden{
+   display: none;
+}
+
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+    .sidenav {
+        margin: 0; /* t r b l */
+        position: relative;
+        text-align:  center;
+        box-shadow: 0 0 10px #582A29;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .sidenav #logo{
+        width: 50%;
+        height: 50%;
+        max-width: 75%;
+        max-height: 75%;
+    }
+    .button {
+        width: 85%;
+        align-items: center;
+        background: #EFDBC0;
+        border-radius: 5px;
+        font-family: "Garamond", serif;
+        font-size: 20px;
+        height: 64px;
+        justify-content: center;
+        transition: box-shadow .15s,transform .15s;
+
+    }
+    .main { 
+        padding: 15px;
+        margin: 15px; /* t r b l */
+        box-shadow: 0 0 10px #F9EEE5;
+        float: left;
+    }
+    footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        color: #F9EEE5;
+        text-shadow: 1px 1px 2px #3B3B3B;
+        font-family: "Garamond", serif;
+    }
 }
