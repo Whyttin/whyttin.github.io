@@ -129,6 +129,9 @@ h5{
     font-family: "Garamond", serif;
     word-wrap: break-word;
 }
+dividerbar{
+    font-size: 12px;
+}
 
 .main img{
     width:99.6%;
@@ -143,9 +146,9 @@ h5{
 
 /*Prevent overflow of large images*/
 .main img, .sidebar-left img {
-  max-width: 100%;
-  height: auto;
-  }
+    max-width: 100%;
+    height: auto;
+}
 
 footer {
     position: relative;
@@ -157,15 +160,14 @@ footer {
 }
 
 ul{
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
+
 .hidden{
    display: none;
 }
-
 
 /* Use a media query to add a break point at 800px: */
 @media screen and (max-width: 800px) {
